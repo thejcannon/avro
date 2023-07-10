@@ -1180,7 +1180,7 @@ def make_avsc_object(
     raise avro.errors.SchemaParseException(fail_msg)
 
 
-def parse(json_string: str, validate_enum_symbols: bool = True, validate_names: bool = True) -> Schema:
+def parse(json_string: str | bytes | bytearray, validate_enum_symbols: bool = True, validate_names: bool = True) -> Schema:
     """Constructs the Schema from the JSON text.
 
     @arg json_string: The json string of the schema to parse
